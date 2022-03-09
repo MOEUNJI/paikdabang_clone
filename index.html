@@ -8,6 +8,7 @@
     <title>빽다방</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,10 +16,21 @@
         <div class="media-container">
             <div class="media-header">
                 <figure class="media-header-logo"></figure>
-                <div class="hamberger-box">
-                    <span class="hemberger"></span>
-                    <span class="hemberger"></span>
-                    <span class="hemberger"></span>
+
+                <div id="mySideBar" class="sidebar">
+                    <a href="#">빽다방</a>
+                    <a href="#">메뉴</a>
+                    <a href="#">소식</a>
+                    <a href="#">커뮤니티</a>
+                    <a href="#">매장안내</a>
+                    <a href="#">창업안내</a>
+                    <a href="#">고객의 소리</a>
+                </div>
+
+                <div class="hamberger-box" onclick="openNav()">
+                    <span class="hamberger" id="ham1"></span>
+                    <span class="hamberger" id="ham2"></span>
+                    <span class="hamberger" id="ham3"></span>
                 </div>
             </div> 
         </div>
@@ -86,47 +98,41 @@
             </div>
         </div>
     </header>
+    <section class="main-slider">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./image/strawberry.jpg" alt="">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="./image/coldbrew.jpg" alt="">
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="./image/membership.jpg" alt="">
+            </div>
 
-        <div id="visual">     
-                <div class="on">
-                     <a href="#">
-                        <figure class="strawberry-img"></figure>
-                    </a>
-                </div>
-<!-- 
-                 <div>
-                     <a href="#">
-                        <img src="./image/coldbrew.jpg" alt="coldbrew">
-                    </a>
-                </div>
-                
-                 <div>
-                     <a href="#">
-                        <img src="./image/membership.jpg" alt="3">
-                    </a>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="./image/mugwort.jpg" alt="4">
-                    </a>
-                </div>    -->
-        </div>  
-            <section id="control">
-                <a class="on" href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-            </section>
-      </div>
-
-    <!-- <section class="main-section">
-        <figure class="strawberry-img"></figure>
-        <figure class="coldbrew-img"></figure>
-        <figure class="membership-img"></figure>
-        <figure class="mugwort-img"></figure>
-    </section> -->
-
+            <div class="mySlides fade">
+                <img src="./image/mugwort.jpg" alt="">
+            </div>
+        </div>
+    
+            <div id="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+    </section>
+    </div>  
+        <section id="control">
+            <a class="on" href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </section>
+    </div>
 
     <section class="sub-section">
         <figure class="coffee-store-img"></figure>
@@ -287,15 +293,13 @@
             </div>
         </div>
     </footer>
-    <div class="btn-contaier">
+    <div class="btn-container" id="btn1">
         <a href="#">
             <figure class="top-btn-img"></figure>
         </a>
     </div>
 
-    <script>
-        
-    </script>
+    <script src="./script/script.js"></script>
     </body>
     
     </html>
